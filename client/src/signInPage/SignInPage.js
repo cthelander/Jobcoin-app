@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const checkAddress = (inputAddress, setAddressInfo) => {
+export const checkAddress = (inputAddress, setAddressInfo) => {
   const axios = require('axios');
 
   axios.get('signin?address=' + inputAddress)
@@ -35,7 +35,7 @@ const SignInPage = ({ setAddressInfo }) => {
 
   return (
     <div className="Box">
-      <div className="Header">
+      <div className="Box-Header">
         Welcome! Sign In With Your Jobcoin Address
       </div>
       <div className="Section">
@@ -49,14 +49,13 @@ const SignInPage = ({ setAddressInfo }) => {
             <input
               className="Input"
               onChange={(e) => setInputAddress(e.target.value)}
-              placeholder="Address"
             />
           </div>
           <div>
           <input
             className="Button"
             type="submit"
-            value="Submit"
+            value="Sign In"
           />
           </div>
         </form>

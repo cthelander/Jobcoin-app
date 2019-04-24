@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import JobCoinPage from './JobCoinPage'; 
-import SignInPage from './SignInPage'; 
+import JobCoinPage from './JobCoinPage/JobCoinPage'; 
+import SignInPage from './signInPage/SignInPage'; 
 import { initialState } from './constants'; 
 
 import './App.css';

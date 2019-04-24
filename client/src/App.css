@@ -1,5 +1,5 @@
 body {
-  background-color: #0d5d6c;
+  background-color: #4d6d7a;
 }
 
 .App {
@@ -10,13 +10,14 @@ body {
   color: #fff;
   font-size: 150%;
   margin: 25px;
-  border: 2px solid #444;
+  border: 1px solid #aaa;
   width: 400px;
+  border-radius: 5px;
 }
 
-.Header {
+.Box-Header {
   padding: 20px;
-  border-bottom: 2px solid #444; 
+  border-bottom: 1px solid #aaa; 
 }
 
 .Section {
@@ -31,12 +32,28 @@ form {
   margin: 10px 0 15px 0; 
   padding: 5px;
   width: 96%;
+  border-radius: 5px;
 }
 
 .Button {
+  width: 100%;
   padding: 7px;
   font-size: 15px;
-  background-color: transparent;
-  color: #ffff;
-  width: 100%
+  color: #222;
+  background-color: #62d7f7;
+  border-radius: 5px;
+  border-width: 0px;
+  cursor: pointer;
+}
+
+.Header {
+  color: #fff;
+  border-bottom: 1px solid #aaa; 
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header-Link {
+  color: #62d7f7;
 }
