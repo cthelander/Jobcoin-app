@@ -8,7 +8,7 @@ const transformTransactions = (address, balance, transactions) => {
     const unixTime = (new Date(transaction.timestamp)).getTime();
     const amount = parseInt(transaction.amount);
 
-//add trasaction amount if sent to address or subtract if address sent amount
+    // add transaction amount if sent to address or subtract if address sent amount
     if(transaction.toAddress === address) {
       currentBalance = currentBalance + amount;
     } else {

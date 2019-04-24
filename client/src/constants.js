@@ -6,7 +6,7 @@ export const initialState = {
 };
 
 export const initialSendState = {
-  toAdrress: "",
+  toAddress: "",
   fromAddress: "",
   amount: ""
 };
