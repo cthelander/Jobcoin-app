@@ -9,8 +9,15 @@ const transformTransactions = (transactions) => {
 
 const TransactionGraph = ({ transactions }) => {
   const options = {
+    rangeSelector: { selected: 1 },
     title: { text: 'Transaction History' },
-    series: [{ data: transformTransactions(transactions) }]
+    xAxis: { ordinal: false, type: "datetime" },
+    series: [{
+      name: 'Balance',
+      type: 'spline',
+      data: transactions.map(t => [(new Date(t.timestamp)).getTime(), parseInt(t.amount)]),
+      tooltip: { valueDecimals: 0 }
+    }]
   };
 
   return (
