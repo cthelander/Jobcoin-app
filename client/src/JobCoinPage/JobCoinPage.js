@@ -10,7 +10,10 @@ const JobCoinPage = ({ addressInfo, setAddressInfo }) => {
 
   return (
     <div>
-      <Header setAddressInfo={setAddressInfo}/>
+      <Header
+        address={address}
+        setAddressInfo={setAddressInfo}
+      />
       <div className="Jobcoin-container">
         <div>
           <Balance balance={balance}/>

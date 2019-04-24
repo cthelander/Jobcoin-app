@@ -1,16 +1,19 @@
 import React from 'react';
 import { initialState } from '../constants'; 
 
-const Header = ({ setAddressInfo }) => (
+const Header = ({ address, setAddressInfo }) => (
   <div className="Header">
     <div className="Header-Welcome">
       Welcome to Jobcoin!
     </div>
-    <div
-      className="Header-Link"
-      onClick={() => setAddressInfo(initialState)}
-    >
-      Sign Out
+    <div className="Jobcoin-container">
+      {address} Signed in 
+      <div
+        className="Header-Link"
+        onClick={() => setAddressInfo(initialState)}
+      >
+        Sign Out
+      </div>
     </div>
   </div>
 );

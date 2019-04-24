@@ -56,6 +56,8 @@ form {
 
 .Header-Link {
   color: #62d7f7;
+  margin-left: 15px;
+  cursor: pointer;
 }
 
 .Jobcoin-container {
