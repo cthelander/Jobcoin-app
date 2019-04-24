@@ -19,7 +19,11 @@ const JobCoinPage = ({ addressInfo, setAddressInfo }) => {
             setAddressInfo={setAddressInfo}
           />
         </div>
-        <TransactionGraph transactions={transactions}/>
+        <TransactionGraph
+          address={address}
+          balance={balance}
+          transactions={transactions}
+        />
       </div>
     </div>
   );
