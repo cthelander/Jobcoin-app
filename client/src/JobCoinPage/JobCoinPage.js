@@ -11,12 +11,16 @@ const JobCoinPage = ({ addressInfo, setAddressInfo }) => {
   return (
     <div>
       <Header setAddressInfo={setAddressInfo}/>
-      <Balance balance={balance}/>
-      <SendJobcoin
-        address={address}
-        setAddressInfo={setAddressInfo}
-      />
-      <TransactionGraph transactions={transactions}/>
+      <div className="Jobcoin-container">
+        <div>
+          <Balance balance={balance}/>
+          <SendJobcoin
+            address={address}
+            setAddressInfo={setAddressInfo}
+          />
+        </div>
+        <TransactionGraph transactions={transactions}/>
+      </div>
     </div>
   );
 }

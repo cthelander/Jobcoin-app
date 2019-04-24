@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { initialState } from '../constants';
+
 export const checkAddress = (inputAddress, setAddressInfo) => {
   const axios = require('axios');
 
@@ -18,6 +20,11 @@ export const checkAddress = (inputAddress, setAddressInfo) => {
         balance: response.data.balance,
         transactions: response.data.transactions
       });
+    } else {
+      setAddressInfo({
+        ...initialState,
+        error: true
+      });
     }
   })
   .catch(function (error) {
@@ -25,7 +32,7 @@ export const checkAddress = (inputAddress, setAddressInfo) => {
   });
 };
 
-const SignInPage = ({ setAddressInfo }) => {
+const SignInPage = ({ setAddressInfo, error }) => {
   const [inputAddress, setInputAddress] = useState("");
 	
   const submitSignIn = (e) => {
@@ -52,6 +59,11 @@ const SignInPage = ({ setAddressInfo }) => {
             />
           </div>
           <div>
+          {error && 
+            <div className="SignIn-error">
+              There was an error with that address please try again.
+            </div>
+          }
           <input
             className="Button"
             type="submit"

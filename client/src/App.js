@@ -16,7 +16,10 @@ const App = () => {
           addressInfo={addressInfo}
           setAddressInfo={setAddressInfo}
         /> :
-        <SignInPage setAddressInfo={setAddressInfo}/>
+        <SignInPage
+          setAddressInfo={setAddressInfo}
+          error={addressInfo.error}
+        />
       }
     </div>
   );

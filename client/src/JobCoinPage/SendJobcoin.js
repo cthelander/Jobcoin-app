@@ -41,7 +41,7 @@ const SendJobcoin = ({ address, setAddressInfo }) => {
 
   return (
     <div className="Box">
-      <div className="Header">
+      <div className="Box-Header">
         Send Jobcoin
       </div>
       <div className="Section">

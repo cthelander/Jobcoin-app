@@ -8,7 +8,6 @@ body {
 
 .Box {
   color: #fff;
-  font-size: 150%;
   margin: 25px;
   border: 1px solid #aaa;
   width: 400px;
@@ -16,6 +15,7 @@ body {
 }
 
 .Box-Header {
+  font-size: 150%;
   padding: 20px;
   border-bottom: 1px solid #aaa; 
 }
@@ -56,4 +56,16 @@ form {
 
 .Header-Link {
   color: #62d7f7;
+}
+
+.Jobcoin-container {
+  display: flex;
+}
+
+.Graph-container {
+  align-self: center;
+}
+
+.SignIn-error {
+  margin-bottom: 10px;
 }
